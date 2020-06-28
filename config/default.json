@@ -1,0 +1,5 @@
+{
+    "mongo" : {
+        "host": "mongodb://product-mongo-db:27017/product"
+    }
+}
