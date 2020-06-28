@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  app:
+    container_name: product-api
+    environment:
+      PRODUCT_JWT_ACCESS_KEY: ${PRODUCT_JWT_ACCESS_KEY}
+      WAIT_HOSTS: product-mongo-db:27017
+    restart: always
+    build: .
+    ports:
+      - "5000:5000"
+    links:
+      - mongo
+  mongo:
+    container_name: product-mongo-db
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongo
