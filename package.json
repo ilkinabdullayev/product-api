@@ -17,7 +17,7 @@
     "express-async-errors": "3.0.0",
     "fawn": "2.1.5",
     "joi": "13.6.0",
-    "jsonwebtoken": "8.3.0",
+    "jsonwebtoken": "9.0.0",
     "memory-cache": "0.2.0",
     "moment": "2.22.2",
     "mongoose": "5.2.12",
